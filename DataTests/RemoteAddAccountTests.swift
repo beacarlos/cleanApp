@@ -10,9 +10,9 @@ import XCTest
 // resposabilidade de saber sobre a URL
 class RemoteAddAccount {
     private let url: URL
-    private let httpClient: HttpClient
+    private let httpClient: HttpClientPost
     
-    init(url: URL, httpClient: HttpClient) {
+    init(url: URL, httpClient: HttpClientPost) {
         self.url = url
         self.httpClient = httpClient
     }
@@ -22,9 +22,14 @@ class RemoteAddAccount {
     }
 }
 
-// protocolo que defini o que o client http vai fazer.
-protocol HttpClient {
+// protocolo que testa o metodo post do client, ou seja, cadastra uma conta.
+protocol HttpClientPost {
     func post(url: URL)
+}
+
+// pesquisa uma conta no client API.
+protocol HttpClientGet {
+    func get(url: URL)
 }
 
 // teste que implementa a criação de uma conta nova utilizando API
@@ -40,7 +45,7 @@ class RemoteAddAccountTests: XCTestCase {
     }
     
     // mocking de um retorno de requiisição da API.
-    class HttpClientSpy: HttpClient {
+    class HttpClientSpy: HttpClientPost {
         var url: URL?
         func post(url: URL) {
             self.url = url
