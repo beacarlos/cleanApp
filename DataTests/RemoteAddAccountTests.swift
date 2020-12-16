@@ -7,26 +7,7 @@
 
 import XCTest
 import Domain
-
-// resposabilidade de saber sobre a URL
-class RemoteAddAccount {
-    private let url: URL
-    private let httpClient: HttpClientPost
-    
-    init(url: URL, httpClient: HttpClientPost) {
-        self.url = url
-        self.httpClient = httpClient
-    }
-    
-    func add(addAccountModel: AddAccountModel) {
-        httpClient.post(to: url, with: addAccountModel.toData())
-    }
-}
-
-// protocolo que testa o metodo post do client, ou seja, cadastra uma conta.
-protocol HttpClientPost {
-    func post(to url: URL, with data: Data?)
-}
+import Data
 
 // teste que implementa a criação de uma conta nova utilizando API
 class RemoteAddAccountTests: XCTestCase {

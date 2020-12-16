@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol Model: Encodable {}
+public protocol Model: Encodable {}
 
-extension Model {
-    public func toData() -> Data? {
+public extension Model {
+    func toData() -> Data? {
         return try? JSONEncoder().encode(self)
     }
 }
