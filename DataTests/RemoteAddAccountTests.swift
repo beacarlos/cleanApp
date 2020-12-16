@@ -41,8 +41,7 @@ class RemoteAddAccountTests: XCTestCase {
         guard let url = URL(string: "http://any-url.com") else { return }
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
-        let addAccountModel = AddAccountModel(name: "Beatriz Carlos", email: "whobeatrizcarlos@gmail.com", password: "12345", passwordConfirmation: "12345")
-        sut.add(addAccountModel: addAccountModel)
+        sut.add(addAccountModel: makeAccountModel())
         
         XCTAssertEqual(httpClientSpy.url, url)
     }
@@ -52,16 +51,19 @@ class RemoteAddAccountTests: XCTestCase {
         guard let url = URL(string: "http://any-url.com") else { return }
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
-        let addAccountModel = AddAccountModel(name: "Beatriz Carlos", email: "whobeatrizcarlos@gmail.com", password: "12345", passwordConfirmation: "12345")
-        sut.add(addAccountModel: addAccountModel)
+        sut.add(addAccountModel: makeAccountModel())
         
-        let data = try? JSONEncoder().encode(addAccountModel)
+        let data = try? JSONEncoder().encode(makeAccountModel())
         
         XCTAssertEqual(httpClientSpy.data, data)
     }
 }
 
 extension RemoteAddAccountTests {
+    func makeAccountModel() -> AddAccountModel {
+        return AddAccountModel(name: "Beatriz Carlos", email: "whobeatrizcarlos@gmail.com", password: "12345", passwordConfirmation: "12345")
+    }
+    
     // class mocking de um retorno de requiisição da API.
     class HttpClientSpy: HttpClientPost {
         var url: URL?
