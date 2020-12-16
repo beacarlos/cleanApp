@@ -16,6 +16,9 @@
 		777DCF23258A99B400BF12F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 777DCF22258A99B400BF12F5 /* .swiftlint.yml */; };
 		777DCF24258A99B400BF12F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 777DCF22258A99B400BF12F5 /* .swiftlint.yml */; };
 		777DCF25258A99B400BF12F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 777DCF22258A99B400BF12F5 /* .swiftlint.yml */; };
+		777DCF2D258AAD1100BF12F5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777DCF2C258AAD1100BF12F5 /* Model.swift */; };
+		777DCF2E258AAD1100BF12F5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777DCF2C258AAD1100BF12F5 /* Model.swift */; };
+		777DCF2F258AAD1100BF12F5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777DCF2C258AAD1100BF12F5 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,7 @@
 		777DCF08258A7E2100BF12F5 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		777DCF0A258A7E2100BF12F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777DCF22258A99B400BF12F5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		777DCF2C258AAD1100BF12F5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				777DCEEA258A788E00BF12F5 /* Info.plist */,
 				777DCEF0258A7B6300BF12F5 /* AddAcount.swift */,
 				777DCEF3258A7DC300BF12F5 /* AccountModel.swift */,
+				777DCF2C258AAD1100BF12F5 /* Model.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 					};
 					777DCEFA258A7E2100BF12F5 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					777DCF02258A7E2100BF12F5 = {
 						CreatedOnToolsVersion = 12.3;
@@ -294,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777DCF2D258AAD1100BF12F5 /* Model.swift in Sources */,
 				777DCEF1258A7B6300BF12F5 /* AddAcount.swift in Sources */,
 				777DCEF4258A7DC300BF12F5 /* AccountModel.swift in Sources */,
 			);
@@ -303,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777DCF2E258AAD1100BF12F5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				777DCF09258A7E2100BF12F5 /* RemoteAddAccountTests.swift in Sources */,
+				777DCF2F258AAD1100BF12F5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +519,7 @@
 		777DCF0D258A7E2100BF12F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -529,6 +539,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -536,6 +547,7 @@
 		777DCF0E258A7E2100BF12F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -562,6 +574,7 @@
 		777DCF10258A7E2100BF12F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VH525588L5;
@@ -582,6 +595,7 @@
 		777DCF11258A7E2100BF12F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VH525588L5;

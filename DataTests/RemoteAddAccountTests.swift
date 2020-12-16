@@ -19,8 +19,7 @@ class RemoteAddAccount {
     }
     
     func add(addAccountModel: AddAccountModel) {
-        let data = try? JSONEncoder().encode(addAccountModel)
-        httpClient.post(to: url, with: data)
+        httpClient.post(to: url, with: addAccountModel.toData())
     }
 }
 
@@ -28,11 +27,6 @@ class RemoteAddAccount {
 protocol HttpClientPost {
     func post(to url: URL, with data: Data?)
 }
-
-//// pesquisa uma conta no client API.
-//protocol HttpClientGet {
-//    func get(to url: URL, with data: Data?)
-//}
 
 // teste que implementa a criação de uma conta nova utilizando API
 class RemoteAddAccountTests: XCTestCase {
@@ -47,9 +41,9 @@ class RemoteAddAccountTests: XCTestCase {
     // teste que testa se o dado seja igual ao data abstraido pelo AddAccountModel.
     func test_add_should_call_httpClient_with_correct_data() {
         let (sut, httpClientSpy) = makeSut()
-        sut.add(addAccountModel: makeAccountModel())
-        let data = try? JSONEncoder().encode(makeAccountModel())
-        XCTAssertEqual(httpClientSpy.data, data)
+        let addAccountModel = makeAccountModel()
+        sut.add(addAccountModel: addAccountModel)
+        XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
     }
 }
 
