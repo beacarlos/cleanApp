@@ -13,6 +13,9 @@
 		777DCF09258A7E2100BF12F5 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777DCF08258A7E2100BF12F5 /* RemoteAddAccountTests.swift */; };
 		777DCF19258A7E4400BF12F5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777DCEE7258A788E00BF12F5 /* Domain.framework */; };
 		777DCF1A258A7E4400BF12F5 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 777DCEE7258A788E00BF12F5 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		777DCF23258A99B400BF12F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 777DCF22258A99B400BF12F5 /* .swiftlint.yml */; };
+		777DCF24258A99B400BF12F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 777DCF22258A99B400BF12F5 /* .swiftlint.yml */; };
+		777DCF25258A99B400BF12F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 777DCF22258A99B400BF12F5 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,7 @@
 		777DCF03258A7E2100BF12F5 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		777DCF08258A7E2100BF12F5 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		777DCF0A258A7E2100BF12F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777DCF22258A99B400BF12F5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		777DCECB258A77F000BF12F5 = {
 			isa = PBXGroup;
 			children = (
+				777DCF22258A99B400BF12F5 /* .swiftlint.yml */,
 				777DCEE8258A788E00BF12F5 /* Domain */,
 				777DCEFC258A7E2100BF12F5 /* Data */,
 				777DCF07258A7E2100BF12F5 /* DataTests */,
@@ -262,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777DCF23258A99B400BF12F5 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777DCF24258A99B400BF12F5 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777DCF25258A99B400BF12F5 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
