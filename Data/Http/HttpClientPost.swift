@@ -9,5 +9,9 @@ import Foundation
 
 // protocolo que testa o metodo post do client, ou seja, cadastra uma conta.
 public protocol HttpClientPost {
-    func post(to url: URL, with data: Data?)
+    func post(to url: URL, with data: Data?, completion: @escaping(HttpError) -> Void)
+}
+
+public enum HttpError: Error {
+    case noConnectivity
 }
