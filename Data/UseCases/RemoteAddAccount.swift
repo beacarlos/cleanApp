@@ -22,4 +22,3 @@ public final class RemoteAddAccount {
         httpClient.post(to: url, with: addAccountModel.toData())
     }
 }
-
